@@ -1,5 +1,5 @@
 param(
-    [string]$Voice = 'zh-CN-XiaoxiaoNeural',
+    [string]$Voice = 'zh-CN-XiaoyiNeural',
     [string]$Rate = '+0%'
 )
 

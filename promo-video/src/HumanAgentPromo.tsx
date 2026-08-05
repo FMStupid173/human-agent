@@ -26,7 +26,7 @@ const C = {
 };
 
 const FPS = 30;
-const CUTS = [103, 270, 350, 531, 611, 715, 800, 850];
+const CUTS = [101, 259, 348, 535, 614, 726, 795, 850];
 const hardShadow = '10px 10px 0 rgba(12,12,12,.16)';
 const lightShadow = '10px 10px 0 rgba(201,255,53,.13)';
 
@@ -54,28 +54,29 @@ const GridBackground: React.FC<{dark?: boolean}> = ({dark}) => (
 const FrameChrome: React.FC = () => {
   const frame = useCurrentFrame();
   const width = interpolate(frame, [0, 899], [0, 100], clamp);
-  const inverse = (frame >= 270 && frame < 350) || (frame >= 611 && frame < 715) || frame >= 850;
+  const inverse = (frame >= 259 && frame < 348) || (frame >= 614 && frame < 726) || frame >= 850;
   const chromeColor = inverse ? 'rgba(255,255,255,.72)' : C.gray;
   return (
     <>
       <div style={{position: 'absolute', top: 0, left: 0, width: `${width}%`, height: 16, backgroundColor: C.red, zIndex: 60}} />
       <div style={{position: 'absolute', left: 56, right: 56, bottom: 42, display: 'flex', justifyContent: 'space-between', fontFamily, fontSize: 26, fontWeight: 900, color: chromeColor, zIndex: 60}}>
         <span>人味 Agent / HUMAN-AGENT</span>
-        <span>{String(Math.min(30, Math.floor(frame / 30) + 1)).padStart(2, '0')} / 30 SEC</span>
+        <span>{String(Math.min(30, Math.floor(frame / 30) + 1)).padStart(2, '0')} / 30</span>
       </div>
     </>
   );
 };
 
 const captions = [
-  [3, 103, 'AI 最让人出戏的，不只是答错。'],
-  [102, 270, '你只想被听见，它却开始说教；资料没看，它已经下结论。'],
-  [270, 350, '于是我做了人味 Agent。'],
-  [350, 531, '它先判断该接住、追问、质疑还是执行，再决定怎么说。'],
-  [531, 611, '写作时，保留你的声音。'],
-  [611, 733, '做项目时，从输入、状态和证据拆问题；'],
-  [733, 800, '再找反例、跑验证。'],
-  [800, 899, '少一点套话，多一点判断和证据。'],
+  [3, 101, 'AI 最让人出戏的，不只是答错。'],
+  [99, 259, '你只想被听见，它却开始说教；资料没看，它已经下结论。'],
+  [259, 348, '于是，我做了人味 Agent。'],
+  [348, 488, '它先判断：该接住、追问、质疑，还是执行。'],
+  [488, 535, '再决定怎么说。'],
+  [535, 614, '写作时，保留你的声音。'],
+  [614, 726, '做项目时，从输入、状态和证据拆问题；'],
+  [726, 795, '再找反例，跑验证。'],
+  [795, 899, '少一点套话，多一点判断和证据。'],
 ] as const;
 
 const Caption: React.FC = () => {
@@ -186,7 +187,7 @@ const BrandReveal: React.FC = () => {
   const a = rise(f, 0, 250);
   return (
     <AbsoluteFill style={{fontFamily, backgroundColor: C.ink, color: C.white, overflow: 'hidden'}}>
-      <div style={{position: 'absolute', inset: 56, border: `5px solid ${C.lime}`}} />
+      <div style={{position: 'absolute', left: 56, right: 56, top: 56, bottom: 110, border: `5px solid ${C.lime}`}} />
       <div style={{position: 'absolute', left: 82, top: 150, fontSize: 34, color: C.lime, fontWeight: 900}}>OPEN-SOURCE RESPONSE POLICY</div>
       <div style={{position: 'absolute', left: 72, top: 360, fontSize: 146, lineHeight: 0.95, fontWeight: 900, opacity: a, transform: `scale(${0.88 + a * 0.12})`}}>人味<br />Agent</div>
       <div style={{position: 'absolute', left: 76, top: 760, fontSize: 40, lineHeight: 1.45, fontWeight: 700}}>先决定该做什么。<br /><span style={{color: C.lime}}>再决定该怎么说。</span></div>
@@ -310,6 +311,25 @@ const WritingFidelity: React.FC = () => {
       <div style={{marginTop: 34, backgroundColor: C.lime, color: C.ink, border: `4px solid ${C.ink}`, padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxShadow: hardShadow}}>
         <span style={{fontSize: 28, color: C.gray, fontWeight: 900}}>SEMANTIC FIDELITY</span>
         <span style={{fontSize: 36, fontWeight: 900}}>原意 · 强度 · 语气</span>
+      </div>
+      <div style={{marginTop: 42, color: C.ink}}>
+        <div style={{fontSize: 31, fontWeight: 900}}>独特机制：保护三个表达不变量</div>
+        <div style={{marginTop: 22, display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12}}>
+          {[
+            ['01', '语义不漂移', '不擅自增加结论'],
+            ['02', '强度不稀释', '不替你提前释怀'],
+            ['03', '节奏不抹平', '保留停顿与犹豫'],
+          ].map(([no, title, desc], i) => (
+            <div key={title} style={{minHeight: 220, padding: '22px 18px', border: `4px solid ${C.ink}`, backgroundColor: i === 1 ? C.yellow : C.white, boxShadow: hardShadow}}>
+              <div style={{fontSize: 26, color: C.gray, fontWeight: 900}}>{no}</div>
+              <div style={{fontSize: 29, lineHeight: 1.25, fontWeight: 900, marginTop: 24}}>{title}</div>
+              <div style={{fontSize: 25, lineHeight: 1.35, fontWeight: 700, marginTop: 18}}>{desc}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{marginTop: 24, backgroundColor: C.ink, color: C.white, border: `4px solid ${C.ink}`, padding: '22px 26px', fontSize: 30, lineHeight: 1.3, fontWeight: 900}}>
+          只降低表达阻力，不替用户完成思想。
+        </div>
       </div>
     </AbsoluteFill>
   );
@@ -487,16 +507,16 @@ const Wipe: React.FC<{color: string}> = ({color}) => {
 export const HumanAgentPromo: React.FC = () => (
   <AbsoluteFill style={{backgroundColor: C.paper}}>
     <Audio src={staticFile('voiceover.mp3')} volume={1.55} />
-    <Audio src={staticFile('soundbed.mp3')} volume={0.30} />
+    <Audio src={staticFile('soundbed.mp3')} volume={0.38} />
 
-    <Sequence from={0} durationInFrames={103}><Hook /></Sequence>
-    <Sequence from={103} durationInFrames={167}><PainCases /></Sequence>
-    <Sequence from={270} durationInFrames={80}><BrandReveal /></Sequence>
-    <Sequence from={350} durationInFrames={181}><DynamicRouter /></Sequence>
-    <Sequence from={531} durationInFrames={80}><WritingFidelity /></Sequence>
-    <Sequence from={611} durationInFrames={104}><FirstPrinciples /></Sequence>
-    <Sequence from={715} durationInFrames={85}><AdversarialFinish /></Sequence>
-    <Sequence from={800} durationInFrames={50}><Reliability /></Sequence>
+    <Sequence from={0} durationInFrames={101}><Hook /></Sequence>
+    <Sequence from={101} durationInFrames={158}><PainCases /></Sequence>
+    <Sequence from={259} durationInFrames={89}><BrandReveal /></Sequence>
+    <Sequence from={348} durationInFrames={187}><DynamicRouter /></Sequence>
+    <Sequence from={535} durationInFrames={79}><WritingFidelity /></Sequence>
+    <Sequence from={614} durationInFrames={112}><FirstPrinciples /></Sequence>
+    <Sequence from={726} durationInFrames={69}><AdversarialFinish /></Sequence>
+    <Sequence from={795} durationInFrames={55}><Reliability /></Sequence>
     <Sequence from={850} durationInFrames={50}><CTA /></Sequence>
 
     {CUTS.map((cut, index) => (

@@ -16,7 +16,7 @@ RATE = 48_000
 DURATION = 30.0
 BPM = 92
 BEAT = 60.0 / BPM
-SCENE_CUTS = (0.0, 3.43, 9.00, 11.67, 17.70, 20.37, 23.83, 26.67, 28.33)
+SCENE_CUTS = (0.0, 3.37, 8.63, 11.60, 17.83, 20.47, 24.20, 26.50, 28.33)
 
 
 def segment(start: float, duration: float, total: int) -> tuple[int, int, np.ndarray]:
