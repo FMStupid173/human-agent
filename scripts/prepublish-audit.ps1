@@ -31,13 +31,22 @@ function Test-Text {
     }
 }
 
-$files = Get-ChildItem -LiteralPath $rootPath -Recurse -File | Where-Object {
-    $_.FullName -ne $selfPath -and
-    $_.FullName -notmatch '[\\/]\.git[\\/]' -and
-    $_.FullName -notmatch '[\\/]calibrator[\\/]runs[\\/]' -and
-    $_.FullName -notmatch '[\\/]promo-video[\\/](?:node_modules|out)[\\/]' -and
-    $_.FullName -notmatch '[\\/]__pycache__[\\/]' -and
-    $textExtensions -contains $_.Extension.ToLowerInvariant()
+Push-Location $rootPath
+try {
+    $publishPaths = @(& git ls-files --cached --others --exclude-standard)
+    if ($LASTEXITCODE -ne 0) { throw 'Unable to enumerate publishable files with git ls-files.' }
+}
+finally {
+    Pop-Location
+}
+
+$files = foreach ($relativePath in $publishPaths) {
+    $fullPath = Join-Path $rootPath $relativePath
+    if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) { continue }
+    $file = Get-Item -LiteralPath $fullPath
+    if ($file.FullName -eq $selfPath) { continue }
+    if ($textExtensions -notcontains $file.Extension.ToLowerInvariant()) { continue }
+    $file
 }
 
 foreach ($file in $files) {

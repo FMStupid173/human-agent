@@ -321,10 +321,15 @@ def main() -> int:
                 )
 
     legacy_brand = re.compile(r"calm[ _-]agent", flags=re.I)
+    scan_excluded_dirs = {".git", "node_modules", "tools", "out", "__pycache__"}
     for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts or path.suffix.lower() not in {
+        if (
+            not path.is_file()
+            or any(part in scan_excluded_dirs for part in path.relative_to(ROOT).parts[:-1])
+            or path.suffix.lower() not in {
             ".md", ".py", ".ps1", ".yaml", ".yml", ".json", ".csv", ".txt"
-        }:
+            }
+        ):
             continue
         if legacy_brand.search(path.read_text(encoding="utf-8", errors="ignore")):
             failures.append(f"legacy brand remains: {path.relative_to(ROOT)}")
