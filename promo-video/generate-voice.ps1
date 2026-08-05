@@ -1,6 +1,6 @@
 param(
     [string]$Voice = 'zh-CN-XiaoxiaoNeural',
-    [string]$Rate = '+12%'
+    [string]$Rate = '+32%'
 )
 
 $ErrorActionPreference = 'Stop'
