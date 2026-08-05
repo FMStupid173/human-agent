@@ -73,7 +73,8 @@ const captions = [
   [270, 350, '于是我做了人味 Agent。'],
   [350, 531, '它先判断该接住、追问、质疑还是执行，再决定怎么说。'],
   [531, 611, '写作时，保留你的声音。'],
-  [611, 800, '做项目时，从输入、状态和证据拆问题；再找反例、跑验证。'],
+  [611, 733, '做项目时，从输入、状态和证据拆问题；'],
+  [733, 800, '再找反例、跑验证。'],
   [800, 899, '少一点套话，多一点判断和证据。'],
 ] as const;
 
@@ -367,8 +368,8 @@ const FirstPrinciples: React.FC = () => {
 
 const AdversarialFinish: React.FC = () => {
   const f = useCurrentFrame();
-  const strike = rise(f, 24, 240);
-  const pass = rise(f, 60, 220);
+  const strike = rise(f, 12, 240);
+  const pass = rise(f, 36, 220);
   return (
     <AbsoluteFill style={{fontFamily, backgroundColor: C.yellow, padding: '66px 56px 250px', boxSizing: 'border-box', overflow: 'hidden'}}>
       <Label>06 / 对抗性审查：专门找自己哪里错</Label>
@@ -388,7 +389,7 @@ const AdversarialFinish: React.FC = () => {
       </div>
       <div style={{marginTop: 34, backgroundColor: C.white, border: `4px solid ${C.ink}`, padding: 24}}>
         <div style={{fontSize: 27, fontWeight: 900, marginBottom: 18}}>完成前的三道门</div>
-        {['原问题真的消失', '回归测试覆盖原因', '邻近边界没有被破坏'].map((word, i) => <div key={word} style={{display: 'flex', gap: 18, alignItems: 'center', borderTop: `2px solid ${C.line}`, padding: '18px 0', fontSize: 29, fontWeight: 800, opacity: rise(f, 38 + i * 10)}}><span style={{width: 38, height: 38, backgroundColor: C.lime, border: `3px solid ${C.ink}`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>✓</span>{word}</div>)}
+        {['原问题真的消失', '回归测试覆盖原因', '邻近边界没有被破坏'].map((word, i) => <div key={word} style={{display: 'flex', gap: 18, alignItems: 'center', borderTop: `2px solid ${C.line}`, padding: '18px 0', fontSize: 29, fontWeight: 800, opacity: rise(f, 18 + i * 6)}}><span style={{width: 38, height: 38, backgroundColor: C.lime, border: `3px solid ${C.ink}`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>✓</span>{word}</div>)}
       </div>
       <div style={{marginTop: 30, display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12}}>
         {[
@@ -425,7 +426,7 @@ const Reliability: React.FC = () => {
           ['合理推断', '标明推断，不装成事实', C.cyan, C.white],
           ['未知项', '缺什么证据，就说缺什么', C.yellow, C.ink],
           ['对口来源', 'API 查官方，论文查原文', C.lime, C.ink],
-        ].map(([title, desc, bg, color], i) => <div key={title} style={{backgroundColor: bg, color, minHeight: 190, padding: 20, opacity: rise(f, i * 8), transform: `translateY(${(1 - rise(f, i * 8)) * 30}px)`}}><div style={{fontSize: 34, fontWeight: 900}}>{title}</div><div style={{fontSize: 27, lineHeight: 1.35, marginTop: 18}}>{desc}</div></div>)}
+        ].map(([title, desc, bg, color], i) => <div key={title} style={{backgroundColor: bg, color, minHeight: 190, padding: 20, opacity: rise(f, i * 5), transform: `translateY(${(1 - rise(f, i * 5)) * 30}px)`}}><div style={{fontSize: 34, fontWeight: 900}}>{title}</div><div style={{fontSize: 27, lineHeight: 1.35, marginTop: 18}}>{desc}</div></div>)}
       </div>
       <div style={{position: 'absolute', left: 56, right: 56, top: 890, bottom: 270, border: `4px solid ${C.ink}`, display: 'grid', gridTemplateRows: 'repeat(4,1fr)', boxShadow: hardShadow}}>
         {[
