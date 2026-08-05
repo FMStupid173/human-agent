@@ -1,6 +1,6 @@
 # Platform Adapters
 
-Calm Agent has one behavioral core and two delivery routes:
+人味 Agent has one behavioral core and two delivery routes:
 
 - **Native Skill:** install the complete `skill/` directory. The host discovers `SKILL.md` and loads referenced files when needed.
 - **Instruction adapter:** paste a platform-specific prompt into a persistent instruction surface, or use the universal prompt at the start of a fresh chat.

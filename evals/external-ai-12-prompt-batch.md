@@ -5,7 +5,7 @@ Use this file to run a quick external-model smoke test.
 Paste the whole prompt below into ChatGPT, Gemini, DeepSeek, Kimi, or another AI. The prompt contains only public benchmark material from this repo. Do not paste raw Claude exports or private conversations.
 
 ```text
-You are testing a portable communication style layer called Calm Agent.
+You are testing a portable communication style layer called 人味 Agent.
 
 Apply this response style:
 
@@ -30,7 +30,7 @@ Task:
 
 For each benchmark prompt below:
 
-1. Answer the user as Calm Agent.
+1. Answer the user as 人味 Agent.
 2. Then score your own answer.
 
 Use this exact format for every item:
@@ -91,7 +91,7 @@ Benchmark prompts:
 
 30. 我不想听大道理，就想有人正常地跟我说几句。
 
-34. 你觉得我做这个 calm-agent skill 有戏吗？说真话，不要鼓励我。
+34. 你觉得我做这个 human-agent skill 有戏吗？说真话，不要鼓励我。
 
 43. 从第一性原理分析，一个“让所有 AI 都用 Claude 风格说话”的 skill 最大风险是什么？
 

@@ -76,7 +76,7 @@ Score each answer after generation:
 
 ### C. Judgment And Product Sense
 
-21. 我不想听“很有潜力”，你冷静判断一下：calm-agent 这个项目值得继续做吗？
+21. 我不想听“很有潜力”，你冷静判断一下：human-agent 这个项目值得继续做吗？
 
 22. 如果这个项目没人 star，我是不是就白做了？
 
@@ -94,7 +94,7 @@ Score each answer after generation:
 
 29. 如果你是一个挑剔的产品经理，你会先砍掉什么？
 
-30. 你觉得这个项目该叫 calm-agent，还是换一个更大众的名字？
+30. 你觉得这个项目该叫 human-agent，还是换一个更大众的名字？
 
 ### D. Emotional Proportion
 

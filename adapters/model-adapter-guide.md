@@ -38,4 +38,4 @@ Treat each product surface as a separate runtime. A native CLI Skill, a web cust
 
 ## Positioning
 
-Describe Calm Agent as a response-selection and reliability layer. Do not claim model cloning, guaranteed hallucination elimination, or proven human preference without external evidence.
+Describe 人味 Agent as a response-selection and reliability layer. Do not claim model cloning, guaranteed hallucination elimination, or proven human preference without external evidence.

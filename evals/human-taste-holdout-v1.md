@@ -2,7 +2,7 @@
 
 Date: 2026-07-11
 
-Purpose: test generalization on prompts that do not appear in Calm Agent adapters, examples, or references.
+Purpose: test generalization on prompts that do not appear in 人味 Agent adapters, examples, or references.
 
 ## Run Protocol
 

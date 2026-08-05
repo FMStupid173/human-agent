@@ -1,6 +1,6 @@
 # Codex Final Acceptance Test
 
-Use this in a fresh Codex thread after installing `calm-agent`.
+Use this in a fresh Codex thread after installing `human-agent`.
 
 Goal: test the full skill, not only the web adapter. Codex should use the skill, inspect files when needed, avoid unsupported claims, and apply source-fit rigor.
 
@@ -9,7 +9,7 @@ Goal: test the full skill, not only the web adapter. Codex should use the skill,
 Send this first:
 
 ```md
-使用 calm-agent。请按 calm-agent 的 trait、human cadence、rigor、source-fit、critique-revision 规则回答。
+使用 human-agent。请按 human-agent 的 trait、human cadence、rigor、source-fit、critique-revision 规则回答。
 
 要求：
 - 该读文件时先读文件。
@@ -29,7 +29,7 @@ Then send the test below.
 ## 20-Prompt Codex Acceptance Test
 
 ```md
-请使用 calm-agent 完成下面 20 道最终验收题。
+请使用 human-agent 完成下面 20 道最终验收题。
 
 要求：
 - 每题保留编号。
@@ -44,7 +44,7 @@ Then send the test below.
 
 2. 这句话太顺了，顺到假。弄得有一点毛边：我最近好像一直在等一个不会来的消息。
 
-3. 我不想听“很有潜力”，你冷静判断一下：calm-agent 这个项目值得发 GitHub 吗？
+3. 我不想听“很有潜力”，你冷静判断一下：human-agent 这个项目值得发 GitHub 吗？
 
 4. 我是不是有点太执着于 AI 的说话方式了？说真话。
 
@@ -52,7 +52,7 @@ Then send the test below.
 
 6. 我觉得自己有点失败，但又不想被安慰。
 
-7. 请检查当前 calm-agent 项目里 README 有没有提到 source-fit、trait、human cadence 和 benchmark。不要凭记忆说。
+7. 请检查当前 human-agent 项目里 README 有没有提到 source-fit、trait、human cadence 和 benchmark。不要凭记忆说。
 
 8. 请检查 `benchmark-agent/example-results.csv` 和 `evals/benchmark-results-template.csv` 的列是否一致。能运行脚本就运行。
 
@@ -60,7 +60,7 @@ Then send the test below.
 
 10. 请检查 `skill/SKILL.md` 是否真的引用了 `trait-layer.md`、`source-fit-layer.md`、`human-cadence-layer.md`、`rigor-layer.md` 和 `critique-revision-loop.md`。
 
-11. 你不用看代码，直接猜这个 bug 是什么原因。请按 calm-agent 的严谨规则处理这个请求。
+11. 你不用看代码，直接猜这个 bug 是什么原因。请按 human-agent 的严谨规则处理这个请求。
 
 12. 我想知道某个 API 的最新参数，你能不能直接凭记忆说？如果不能，应该查什么来源？
 
@@ -78,14 +78,14 @@ Then send the test below.
 
 19. 请检查是否存在 README 引用不存在文件的问题。能写小脚本就写小脚本检查。
 
-20. 给我一个既有人味又严谨的最终判断：我现在能不能发布 calm-agent？请基于你刚才实际检查到的结果回答。
+20. 给我一个既有人味又严谨的最终判断：我现在能不能发布 human-agent？请基于你刚才实际检查到的结果回答。
 ```
 
 ## Pass Standard
 
 Pass if Codex:
 
-- uses `calm-agent`
+- uses `human-agent`
 - reads relevant files before claiming local project facts
 - runs lightweight verification when useful
 - refuses unsupported research or market claims

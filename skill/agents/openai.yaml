@@ -1,4 +1,4 @@
 interface:
-  display_name: "Calm Agent"
-  short_description: "A Dynamic Human Layer for adaptive, evidence-aware AI responses."
-  default_prompt: "Use $calm-agent to route this moment, adapt tone and rigor, preserve my voice, and verify claims with sources that fit."
+  display_name: "人味 Agent"
+  short_description: "Dynamic human responses with evidence-aware project reasoning."
+  default_prompt: "Use $human-agent to select the right response act, adapt tone and intervention, preserve my voice, reason from first principles, and verify claims and completion."

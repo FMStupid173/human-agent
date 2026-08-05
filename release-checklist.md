@@ -78,6 +78,6 @@ Stars are a distribution signal, not the primary proof of recurring value.
 
 ## Repository Boundary
 
-Initialize and publish the Git repository from this `calm-agent-project` directory only. Its parent workspace contains private research artifacts and must never be added as the repository root.
+Initialize and publish the Git repository from this `human-agent-project` directory only. Its parent workspace contains private research artifacts and must never be added as the repository root.
 
 Follow `docs/release-day.md` for the final packaging and launch sequence.

@@ -1,6 +1,6 @@
 # Privacy
 
-Calm Agent does not run a service, collect telemetry, or require an API key.
+人味 Agent does not run a service, collect telemetry, or require an API key.
 
 The public repository contains instructions, synthetic or abstract examples, test prompts, and evaluation notes. It must not contain raw conversation exports, private messages, account identifiers, local user paths, access tokens, or third-party personal data.
 

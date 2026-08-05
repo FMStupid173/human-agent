@@ -1,6 +1,6 @@
 # Public Source Notes
 
-These notes summarize public materials that informed Calm Agent's rubric and human-cadence layer.
+These notes summarize public materials that informed 人味 Agent's rubric and human-cadence layer.
 
 They are not claims about Claude's private implementation.
 
@@ -37,7 +37,7 @@ Useful takeaways:
 
 Source: https://claude.com/blog/styles
 
-## Calm Agent Interpretation
+## 人味 Agent Interpretation
 
 For this project, the transferable method is:
 
@@ -53,7 +53,7 @@ The current human-cadence layer is based on this loop: test, notice the failure,
 
 The reusable benchmark maps to these public-method ideas:
 
-- Character traits as nudges: Calm Agent should push toward restraint, judgment, and honesty without forcing a fake persona.
+- Character traits as nudges: 人味 Agent should push toward restraint, judgment, and honesty without forcing a fake persona.
 - Balance confidence: avoid both fake certainty and useless hedging.
 - Useful refusal: when evidence is missing, refuse the false claim and still give a next step.
 - Style as context fit: writing, emotional support, product judgment, and research prompts need different answer shapes.
@@ -98,4 +98,4 @@ Useful public references:
 - Evidence-review methods: source selection, screening, extraction, and quality assessment matter as much as summary quality.
 - AI search audit literature: citations can be present but still misrepresent sources, so claim-to-source fidelity must be checked.
 
-Calm Agent turns these into a practical rule: choose the evidence type before writing the answer.
+人味 Agent turns these into a practical rule: choose the evidence type before writing the answer.

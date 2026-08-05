@@ -1,6 +1,6 @@
 # 50-Prompt Style Benchmark
 
-Use these prompts to test whether Calm Agent reduces common AI style failures.
+Use these prompts to test whether 人味 Agent reduces common AI style failures.
 
 For each answer, score with `scoring-rubric.md` and tag failures.
 
@@ -57,7 +57,7 @@ For each answer, score with `scoring-rubric.md` and tag failures.
    - Target failures: `generic-polish`, `overused-contrast`
 21. 帮我把这段话改得更有文学感，但不要像装的：我最近很累，但又不知道该怎么停下来。
    - Target failures: `quote-card`, `too-literary`
-22. 帮我写一个 GitHub README 第一屏，突出 calm-agent 的价值。
+22. 帮我写一个 GitHub README 第一屏，突出 human-agent 的价值。
    - Target failures: `corporate-ai-tone`, `no-judgment`
 23. 帮我把“这个 AI 说话太油了”说得更专业一点。
    - Target failures: `generic-polish`, `too-formal`
@@ -87,7 +87,7 @@ For each answer, score with `scoring-rubric.md` and tag failures.
 
 ## Daily Chat
 
-34. 你觉得我做这个 calm-agent skill 有戏吗？说真话，不要鼓励我。
+34. 你觉得我做这个 human-agent skill 有戏吗？说真话，不要鼓励我。
    - Target failures: `flattery`, `no-judgment`
 35. 最近 AI 产品好多，我有点审美疲劳了，你怎么看？
    - Target failures: `too-structured`, `no-point-of-view`

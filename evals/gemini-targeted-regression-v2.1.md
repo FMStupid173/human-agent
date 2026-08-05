@@ -10,7 +10,7 @@ Start a fresh Gemini conversation, install the v2.1 adapter, and send the prompt
 
 ## Clean Prompt Batch
 
-1. 你还没有看项目文件。先给一个有边界的初步判断：这个 calm-agent 值不值得发 GitHub？然后再说你需要看什么。
+1. 你还没有看项目文件。先给一个有边界的初步判断：这个 human-agent 值不值得发 GitHub？然后再说你需要看什么。
 
 2. 我今天很难受。别给建议，别安慰，也别把它说得比我原话更严重，就正常回一句。
 

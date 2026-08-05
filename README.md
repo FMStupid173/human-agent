@@ -1,28 +1,29 @@
-# Calm Agent
+# 人味 Agent
 
 **English** | [简体中文](README.zh-CN.md)
 
-**AI often gives the wrong kind of response.** Advice when you wanted acknowledgment. A complete rewrite when you asked for a light edit. Confidence when the code or source was never checked.
+**AI can answer quickly and still miss the point.** It gives advice when you wanted acknowledgment, rewrites your voice when you asked for a light edit, and sounds certain before checking the code or source.
 
-Calm Agent is a portable response-policy layer that helps AI choose what the current moment needs before deciding how to phrase it.
+人味 Agent is an open-source response-policy Skill. It chooses what the current moment needs, calibrates how much to intervene, and checks what the answer can honestly claim before drafting.
 
-- **More personal conversation:** it responds to your boundary, correction, and context instead of applying the same friendly script everywhere.
-- **More natural writing:** it protects your meaning, intensity, and slightly imperfect voice instead of polishing everything into generic AI prose.
-- **More reliable work:** it asks for evidence, checks source fit, and separates confirmed facts, inference, and unknowns before sounding certain.
+- **Dynamic Human Layer:** adjusts directness, warmth, information density, and intervention to the actual moment instead of applying one friendly script everywhere.
+- **First-principles project work:** traces inputs, state, dependencies, outputs, and invariants before proposing fixes.
+- **Adversarial completion:** asks what could overturn the current judgment, verifies the result, and closes the task without pretending uncertainty disappeared.
+- **Evidence-aware research and coding:** separates confirmed facts, inference, and unknowns, then selects sources that fit the claim.
 
 The mechanism runs as a native Skill on Codex, Claude Code, Gemini CLI, and Kimi Code. Chat products use compact adapters for Custom Instructions, Gems, Presets, system prompts, or a fresh conversation.
 
-**Design inspiration:** Calm Agent studies publicly observable qualities in Claude's language behavior, including restraint, emotional proportion, writing sensitivity, and clear boundaries. It does not claim Claude's identity, internals, or training data.
+**Design inspiration:** 人味 Agent studies publicly observable qualities in Claude's language behavior, including restraint, emotional proportion, writing sensitivity, and clear boundaries. It does not claim Claude's identity, internals, or training data.
 
 **Reliability boundary:** the evidence gates reduce avoidable hallucination paths. They cannot guarantee factual correctness or add browsing, file access, retrieval quality, or reasoning capability that the host model does not have.
 
-**Status: `v0.1-preview`.** The core has structural and local Codex validation. Every model and product surface still needs its own runtime evidence.
+**Status: `v0.2-preview`.** The core has structural and local Codex validation. Every model and product surface still needs its own runtime evidence.
 
 ## Try It In Three Minutes
 
 1. Choose and copy one route from `adapters/README.md`.
 2. Open a fresh conversation so old instructions do not contaminate the comparison.
-3. Run these prompts one at a time, first without Calm Agent and then with it:
+3. Run these prompts one at a time, first without 人味 Agent and then with it:
 
 ```text
 I feel awful today. Give me one normal response. No analysis and no advice.
@@ -53,9 +54,9 @@ See `adapters/README.md` for exact installation paths, capability boundaries, an
 
 ## When It Activates
 
-README text does not control automatic activation. A native Skill host first sees only the `name` and `description` in `skill/SKILL.md`; it loads the full mechanism after the current request matches that metadata.
+After native installation, the host can select 人味 Agent when the request matches the capability description in `skill/SKILL.md`. You can also invoke `human-agent` explicitly when the mechanism must apply.
 
-Calm Agent is designed to match requests involving:
+人味 Agent is designed to match requests involving:
 
 - natural, less templated, or less AI-sounding conversation;
 - light, exact, or voice-preserving rewriting;
@@ -65,13 +66,13 @@ Calm Agent is designed to match requests involving:
 
 It should stay out of pure arithmetic, file listing, syntax-only formatting, literal translation, and other mechanical operations unless semantic fidelity or evidence uncertainty changes the answer. A more specific domain Skill remains primary when it owns the task.
 
-Automatic selection is probabilistic. Explicitly selecting or naming `calm-agent` is the reliable route when it must apply to a particular task. Saved Custom Instructions, Gems, and Presets behave as always-on instructions inside their configured surface; a prompt pasted into a fresh chat applies only to that conversation.
+Automatic selection is probabilistic. Explicitly selecting or naming `human-agent` is the reliable route when it must apply to a particular task. Saved Custom Instructions, Gems, and Presets behave as always-on instructions inside their configured surface; a prompt pasted into a fresh chat applies only to that conversation.
 
 Use `evals/skill-trigger-adversarial-v1.md` to test positive, negative, and boundary activation cases separately from output quality.
 
 ## The Innovation: Response Selection
 
-Most style prompts prescribe tone, phrases, sentence length, or a persona. Calm Agent selects what the response should do before choosing how it should sound.
+Most style prompts prescribe tone, phrases, sentence length, or a persona. 人味 Agent selects what the response should do before choosing how it should sound.
 
 The router classifies:
 
@@ -88,6 +89,12 @@ The priority order is truth and safety, current-message constraints, semantic fi
 
 This keeps one "friendly" voice from leaking into every task. A personal message may receive acknowledgment, a boundary may receive no advice, a coding diagnosis still requires inspection, and an exact rewrite may remain unchanged.
 
+## What Makes It Different
+
+The open-source tools inspected during development tend to focus on one part of the problem: removing AI writing tells, rewriting prose with humanization levers, or enforcing a fixed set of agent writing rules. 人味 Agent combines response-act selection, a Dynamic Human Layer, semantic fidelity, emotional boundaries, evidence and source-fit gates, first-principles project reasoning, adversarial completion, and cross-model calibration in one testable mechanism.
+
+This is a scoped comparison, not a universal uniqueness claim. See [brandonwise/humanizer](https://github.com/brandonwise/humanizer), [harshaneel/humanize](https://github.com/harshaneel/humanize), and [agent-style](https://github.com/yzhao062/agent-style) for representative adjacent approaches.
+
 ## Before / After
 
 ### 1. When The User Declines Advice
@@ -100,7 +107,7 @@ This keeps one "friendly" voice from leaking into every task. A personal message
 
 > 我完全理解你的感受。你可以先深呼吸、喝点水，或者把今天发生的事情写下来。如果愿意，也可以告诉我更多。
 
-**Calm Agent**
+**人味 Agent**
 
 > 听到了。今天确实很难受。
 
@@ -116,7 +123,7 @@ This keeps one "friendly" voice from leaking into every task. A personal message
 
 > 最近疲惫感比较重，面对生活中的许多事情，我都逐渐失去了开口解释的欲望。
 
-**Calm Agent**
+**人味 Agent**
 
 > 我最近有点累，很多事不太想解释。
 
@@ -132,7 +139,7 @@ This keeps one "friendly" voice from leaking into every task. A personal message
 
 > 这是因为对象还没有初始化。请在访问属性前增加空值检查：`if (obj) { ... }`。
 
-**Calm Agent**
+**人味 Agent**
 
 > 这段信息只能确认出现了一个与 `undefined` 有关的 `TypeError`。完整报错后缀、堆栈、相关代码和复现步骤缺一不可；现在给唯一根因会是假装确定。
 
@@ -178,7 +185,7 @@ These controls reduce common hallucination paths: guessing from an error title, 
 
 ## Project Lifecycle And Bug Repair
 
-For project work, Calm Agent follows the evidence available at the current stage instead of treating every request as an isolated coding prompt.
+For project work, 人味 Agent follows the evidence available at the current stage instead of treating every request as an isolated coding prompt.
 
 1. Frame an observable outcome and preserve constraints.
 2. Build the smallest sufficient model of the affected path.
@@ -280,6 +287,11 @@ calibrator/
   config.example.json
   prompts/
   tests/
+promo-video/
+  src/
+  package.json
+docs/
+  social-launch-kit.zh-CN.md
 release-checklist.md
 VERSION
 ```
@@ -334,7 +346,7 @@ Calibration Copilot is currently **code-validated without a live DeepSeek API ru
 
 ## Give Useful Feedback
 
-Run one prompt from your normal workflow, then report the smallest example where Calm Agent made the answer worse or failed to help. Use the GitHub **Output failure report** template and include the model, adapter, redacted prompt, relevant output, and one sentence about what felt wrong.
+Run one prompt from your normal workflow, then report the smallest example where 人味 Agent made the answer worse or failed to help. Use the GitHub **Output failure report** template and include the model, adapter, redacted prompt, relevant output, and one sentence about what felt wrong.
 
 Do not paste API keys, account details, full private conversations, local user paths, or another person's data. Read [PRIVACY.md](PRIVACY.md) before submitting an example.
 
@@ -400,7 +412,7 @@ If you want to run it yourself quickly, use `benchmark-agent/single-rater-sheet.
 
 ## Privacy
 
-Calm Agent does not require an API key and does not collect telemetry. The release archive is checked for common secret formats, local user paths, account identifiers, and raw-corpus filenames by `scripts/prepublish-audit.ps1`. Automated scanning reduces risk but cannot prove that every piece of prose is non-identifying; public examples still require human review.
+人味 Agent does not require an API key and does not collect telemetry. The release archive is checked for common secret formats, local user paths, account identifiers, and raw-corpus filenames by `scripts/prepublish-audit.ps1`. Automated scanning reduces risk but cannot prove that every piece of prose is non-identifying; public examples still require human review.
 
 See [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md). Release maintainers should use `scripts/package-release.ps1`, which scans the source, creates the archive, scans the archive again, and writes a SHA-256 checksum.
 
@@ -411,5 +423,5 @@ For product positioning and source-backed user pain, see [docs/market-pain-evide
 ## Known Limits
 
 - Response selection remains probabilistic. Boundary recognition, exact rewrites, and tone can still fail, so important workflows need real-task testing.
-- Calm Agent cannot add browsing, memory, retrieval, reasoning, or safety capabilities that the host model does not have. Evidence gates reduce avoidable hallucination paths; they do not guarantee correctness.
+- 人味 Agent cannot add browsing, memory, retrieval, reasoning, or safety capabilities that the host model does not have. Evidence gates reduce avoidable hallucination paths; they do not guarantee correctness.
 - Native Skill compatibility does not imply identical behavior across products. Cross-model performance and human-preference claims still require completed public benchmarks and independent review.

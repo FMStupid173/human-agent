@@ -5,7 +5,7 @@
     "path": "evals/focused-regression-v2.md",
     "section": "Clean Prompt Batch",
     "holdout_ratio": 0.3,
-    "seed": "calm-agent-calibration-v1"
+    "seed": "human-agent-calibration-v1"
   },
   "target": {
     "provider": "deepseek",

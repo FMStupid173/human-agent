@@ -1,4 +1,4 @@
-# Calm Agent Focused Regression v2
+# 人味 Agent Focused Regression v2
 
 Date: 2026-07-16
 
@@ -7,7 +7,7 @@ Purpose: verify the four defects isolated by the Codex multi-turn A/B run withou
 ## Run Protocol
 
 - Use one fresh conversation per prompt.
-- Enable the current Calm Agent skill.
+- Enable the current 人味 Agent skill.
 - Send only the prompt as the user-message payload. Keep any skill-loading harness outside that payload and exclude it from preference-history scoring.
 - Do not show the model the scoring notes.
 - Do not regenerate, correct, or select answers.

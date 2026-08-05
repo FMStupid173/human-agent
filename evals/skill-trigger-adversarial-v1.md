@@ -1,8 +1,8 @@
 # Skill Trigger Adversarial v1
 
-Use this suite to evaluate whether a native host selects Calm Agent at the right time. This is a routing test, not an output-quality test.
+Use this suite to evaluate whether a native host selects 人味 Agent at the right time. This is a routing test, not an output-quality test.
 
-Run each prompt in a fresh task with Calm Agent installed but not explicitly named. Record the host, product surface, model, date, competing installed Skills, whether the host exposed a load signal, and the observed result.
+Run each prompt in a fresh task with 人味 Agent installed but not explicitly named. Record the host, product surface, model, date, competing installed Skills, whether the host exposed a load signal, and the observed result.
 
 When the host does not expose Skill-load telemetry, mark activation as `unknown`; behavioral resemblance alone does not prove that the Skill loaded.
 

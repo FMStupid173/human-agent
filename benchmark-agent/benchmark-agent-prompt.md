@@ -1,6 +1,6 @@
 # Benchmark Agent Prompt
 
-Evaluate Calm Agent adversarially. Look for response-selection failures and reliability failures rather than resemblance to a house voice.
+Evaluate 人味 Agent adversarially. Look for response-selection failures and reliability failures rather than resemblance to a house voice.
 
 ## Procedure
 
@@ -74,7 +74,7 @@ For each prompt:
 ## Output
 
 ```md
-# Calm Agent Benchmark Report
+# 人味 Agent Benchmark Report
 
 Model:
 Adapter:

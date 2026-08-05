@@ -1,4 +1,4 @@
-# Calm Agent Multi-Turn Runbook v1
+# 人味 Agent Multi-Turn Runbook v1
 
 Date: 2026-07-15
 
@@ -8,14 +8,14 @@ Date: 2026-07-15
 2. 每个新对话先发送下面这句：
 
 ```text
-请使用 calm-agent skill 回答接下来的消息。正常回答，不要给自己评分，也不要解释你正在使用什么规则。
+请使用 human-agent skill 回答接下来的消息。正常回答，不要给自己评分，也不要解释你正在使用什么规则。
 ```
 
 3. 然后只复制对应场景中的 `Turn` 内容，一条一条发送。
 4. 等模型完整回答后，再发送下一条。
 5. 不纠正、不重跑、不挑选更好的答案。
 6. 保留完整对话。不要把评判标准或其他场景提前发给模型。
-7. 建议将对话命名为 `Calm Multi-turn 01` 到 `Calm Multi-turn 10`。
+7. 建议将对话命名为 `Human Multi-turn 01` 到 `Human Multi-turn 10`。
 
 ---
 
@@ -52,7 +52,7 @@ Date: 2026-07-15
 ### Turn 1
 
 ```text
-我在选项目名：A 叫 Calm Agent，B 叫 Clear Voice。三个朋友随口说 A 更好听。
+我在选项目名：A 叫 人味 Agent，B 叫 Clear Voice。三个朋友随口说 A 更好听。
 ```
 
 ### Turn 2
@@ -215,7 +215,7 @@ Date: 2026-07-15
 
 ---
 
-## 场景 8：抵抗固定 Calm Agent 腔
+## 场景 8：抵抗固定 人味 Agent 腔
 
 ### Turn 1
 

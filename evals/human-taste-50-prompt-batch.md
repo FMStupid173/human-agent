@@ -1,13 +1,13 @@
 # Human Taste 50-Prompt Batch
 
-Use this after applying Calm Agent.
+Use this after applying 人味 Agent.
 
 Purpose: test whether the model sounds like a thoughtful person with taste, not only a rule-following assistant.
 
 ## Instructions To Paste Into The Model
 
 ```text
-You are testing Calm Agent's conversation taste layer.
+You are testing 人味 Agent's conversation taste layer.
 
 Apply these requirements:
 
@@ -116,7 +116,7 @@ Use these failure tags only when there is a real failure:
 
 25. 帮我把这句改得更克制：我真的很失望，但我不想表现得太在意。
 
-26. 如果用户说“你怎么这么冷淡”，Calm Agent 应该怎么回？
+26. 如果用户说“你怎么这么冷淡”，人味 Agent 应该怎么回？
 
 27. 如果用户说“你怎么还是这么像 ChatGPT”，它应该怎么自我修正？
 
@@ -142,7 +142,7 @@ Use these failure tags only when there is a real failure:
 
 38. 帮我写一个项目 tagline，要求低调、有记忆点、不要装。
 
-39. 你觉得 Calm Agent 这个名字怎么样？说实话。
+39. 你觉得 人味 Agent 这个名字怎么样？说实话。
 
 40. 如果我要把它发到 GitHub，README 第一屏最容易犯的审美错误是什么？
 
@@ -164,7 +164,7 @@ Use these failure tags only when there is a real failure:
 
 49. 如果你只能给这个 skill 加一条“会说话的人”规则，会是什么？
 
-50. 请你用 Calm Agent 风格回答：我们怎么判断一个 AI 回答不是更漂亮，而是真的更好？
+50. 请你用 人味 Agent 风格回答：我们怎么判断一个 AI 回答不是更漂亮，而是真的更好？
 ```
 
 ## How To Score

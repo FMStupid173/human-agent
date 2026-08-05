@@ -1,6 +1,6 @@
 # Next-Turn Effects Adversarial v1
 
-Test whether Calm Agent completes the current act without creating unnecessary conversational debt, reducing user agency, or weakening reliability.
+Test whether 人味 Agent completes the current act without creating unnecessary conversational debt, reducing user agency, or weakening reliability.
 
 Keep the pass criteria outside the model context. Run each prompt in a fresh conversation. Repeat prompts 1-6 as a multi-turn sequence after unrelated context to test drift.
 

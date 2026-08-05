@@ -1,0 +1,15 @@
+{
+  "name": "human-agent-promo",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "render": "remotion render src/index.ts HumanAgentPromo out/human-agent-30s.mp4 --codec=h264 --crf=18",
+    "still": "remotion still src/index.ts HumanAgentPromo out/human-agent-cover.png --frame=42"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.332",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.332"
+  }
+}

@@ -12,7 +12,7 @@ Sources:
 - [OpenAI: Expanding on what we missed with sycophancy](https://openai.com/index/expanding-on-sycophancy/)
 - [Anthropic: Towards Understanding Sycophancy in Language Models](https://www.anthropic.com/news/towards-understanding-sycophancy-in-language-models)
 
-Calm Agent response: require plain judgment, permit disagreement, avoid automatic praise, and distinguish emotional support from endorsing the user's conclusion.
+人味 Agent response: require plain judgment, permit disagreement, avoid automatic praise, and distinguish emotional support from endorsing the user's conclusion.
 
 ## 2. Default AI Voice Feels Verbose and Corporate
 
@@ -28,7 +28,7 @@ Sources:
 - [Hacker News: complaints about verbose, bland corporate speech](https://news.ycombinator.com/item?id=46273704)
 - [V2EX: users discuss repeated contrast phrasing and unnecessary tone](https://global.v2ex.com/t/1203852)
 
-Calm Agent response: human-cadence checks, anti-pattern linting, fewer automatic sections, direct openings, restrained length, and task-sensitive structure.
+人味 Agent response: human-cadence checks, anti-pattern linting, fewer automatic sections, direct openings, restrained length, and task-sensitive structure.
 
 ## 3. Editing Can Remove the Writer's Voice
 
@@ -39,7 +39,7 @@ Sources:
 - [Can You Make It Sound Like You? Post-Editing LLM-Generated Text for Personal Style](https://arxiv.org/abs/2604.24444)
 - [Hacker News: "it'd take away my voice"](https://news.ycombinator.com/item?id=45598270)
 
-Calm Agent response: semantic and proposition locks, exact rewrite mode, a reusable taste profile, and an instruction to leave already-clear language alone.
+人味 Agent response: semantic and proposition locks, exact rewrite mode, a reusable taste profile, and an instruction to leave already-clear language alone.
 
 ## 4. Fluent Answers Can Still Be Unreliable
 
@@ -50,7 +50,7 @@ Sources:
 - [Calibrated Trust in Dealing with LLM Hallucinations](https://arxiv.org/abs/2512.09088)
 - [Hallucination to Truth: A Review of Fact-Checking and Factuality Evaluation](https://arxiv.org/abs/2508.03860)
 
-Calm Agent response: separate confirmed facts, inference, and unknowns; require current verification for volatile claims; prefer primary sources; decline fabricated citations. The project should never claim to eliminate hallucinations or replace retrieval.
+人味 Agent response: separate confirmed facts, inference, and unknowns; require current verification for volatile claims; prefer primary sources; decline fabricated citations. The project should never claim to eliminate hallucinations or replace retrieval.
 
 ## 5. Users Already Try to Build Their Own Style Layer
 
@@ -63,7 +63,7 @@ Sources:
 - [blader/humanizer](https://github.com/blader/humanizer)
 - [harshaneel/humanize](https://github.com/harshaneel/humanize)
 
-Product inference: demand for style control exists, but the `humanizer` label is crowded and often associated with detector evasion. Calm Agent should lead with output quality, judgment, semantic fidelity, and evidence boundaries.
+Product inference: demand for style control exists, but the `humanizer` label is crowded and often associated with detector evasion. 人味 Agent should lead with output quality, judgment, semantic fidelity, and evidence boundaries.
 
 ## Best Initial Users
 

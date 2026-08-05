@@ -24,7 +24,7 @@ def as_score(value: str):
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Summarize Calm Agent benchmark CSV results.")
+    parser = argparse.ArgumentParser(description="Summarize 人味 Agent benchmark CSV results.")
     parser.add_argument("csv_path")
     parser.add_argument("--out", default="")
     args = parser.parse_args()

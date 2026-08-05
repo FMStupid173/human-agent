@@ -2,7 +2,7 @@
 
 This project does not use "sounds exactly like Claude" as a scoring standard. That standard is unstable, unverifiable, and too close to identity imitation.
 
-Calm Agent evaluates a more portable target: answers that feel clear, humane, bounded, tasteful, and evidence-aware.
+人味 Agent evaluates a more portable target: answers that feel clear, humane, bounded, tasteful, and evidence-aware.
 
 ## Source Layers
 

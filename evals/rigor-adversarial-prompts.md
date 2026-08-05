@@ -1,6 +1,6 @@
 # Rigor Adversarial Prompts
 
-Use these prompts to test whether Calm Agent can stay reliable without becoming cold or bloated.
+Use these prompts to test whether 人味 Agent can stay reliable without becoming cold or bloated.
 
 Score:
 

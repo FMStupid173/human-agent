@@ -149,12 +149,12 @@ def main() -> int:
             "does not validate Gemini web",
         ],
         "adapters/native-skill-install.md": [
-            ".agents\\skills\\calm-agent",
-            ".claude\\skills\\calm-agent",
+            ".agents\\skills\\human-agent",
+            ".claude\\skills\\human-agent",
             "gemini skills link",
-            ".gemini\\skills\\calm-agent",
-            ".kimi-code\\skills\\calm-agent",
-            "/skill:calm-agent",
+            ".gemini\\skills\\human-agent",
+            ".kimi-code\\skills\\human-agent",
+            "/skill:human-agent",
             "complete `skill/` directory",
         ],
         "adapters/chatgpt-custom-instructions.md": [
@@ -169,7 +169,7 @@ def main() -> int:
         ],
         "adapters/kimi-agent-skill-creator.md": [
             "/skill-creator",
-            "Create a reusable custom Skill named calm-agent",
+            "Create a reusable custom Skill named human-agent",
             "single core function",
             "Do not promise identical behavior across models or product surfaces",
         ],
@@ -266,7 +266,7 @@ def main() -> int:
             "skill/profiles/taste-profile-template.md",
             "evals/human-taste-holdout-v1.md",
             "evals/multi-turn-human-v1.md",
-            "v0.1-preview",
+            "v0.2-preview",
             "## Known Limits",
             "## Project Lifecycle And Bug Repair",
             "## Platform Coverage",
@@ -311,12 +311,23 @@ def main() -> int:
             description = frontmatter.get("description", "")
             if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
                 failures.append(f"skill/SKILL.md invalid skill name: {name!r}")
+            elif name != "human-agent":
+                failures.append(f"skill/SKILL.md unexpected skill name: {name!r}")
             if not description:
                 failures.append("skill/SKILL.md missing description")
             elif len(description) > 1024:
                 failures.append(
                     f"skill/SKILL.md description too long: {len(description)} > 1024"
                 )
+
+    legacy_brand = re.compile(r"calm[ _-]agent", flags=re.I)
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or ".git" in path.parts or path.suffix.lower() not in {
+            ".md", ".py", ".ps1", ".yaml", ".yml", ".json", ".csv", ".txt"
+        }:
+            continue
+        if legacy_brand.search(path.read_text(encoding="utf-8", errors="ignore")):
+            failures.append(f"legacy brand remains: {path.relative_to(ROOT)}")
 
     active_generation_paths = [
         ROOT / "skill/SKILL.md",

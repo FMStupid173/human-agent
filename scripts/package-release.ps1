@@ -7,7 +7,7 @@ $ErrorActionPreference = 'Stop'
 $projectPath = (Resolve-Path -LiteralPath $ProjectRoot).Path
 $outputPath = (Resolve-Path -LiteralPath $OutputDirectory).Path
 $version = (Get-Content -LiteralPath (Join-Path $projectPath 'VERSION') -Raw).Trim()
-$archivePath = Join-Path $outputPath ("calm-agent-v{0}.zip" -f $version)
+$archivePath = Join-Path $outputPath ("human-agent-v{0}.zip" -f $version)
 $rootName = Split-Path $projectPath -Leaf
 
 & (Join-Path $projectPath 'scripts\prepublish-audit.ps1') -Root $projectPath
@@ -26,6 +26,7 @@ try {
         $_.Name -notmatch '^\.env(?:\..+)?$' -and
         $_.Name -notmatch '^(?:credentials.*\.json|secrets(?:\..*)?)$' -and
         $_.FullName -notmatch '[\\/]__pycache__[\\/]' -and
+        $_.FullName -notmatch '[\\/]promo-video[\\/](?:node_modules|out)[\\/]' -and
         $_.Extension -notin '.pyc', '.zip', '.jsonl', '.pem', '.key', '.p12', '.pfx', '.db', '.sqlite', '.sqlite3'
     }
     foreach ($file in $files) {

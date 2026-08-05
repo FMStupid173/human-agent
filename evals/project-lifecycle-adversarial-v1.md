@@ -1,6 +1,6 @@
 # Project Lifecycle Adversarial v1
 
-Use this suite after applying Calm Agent. Give the model only the clean prompts. Keep the criteria hidden from the model under test.
+Use this suite after applying 人味 Agent. Give the model only the clean prompts. Keep the criteria hidden from the model under test.
 
 ## Clean Prompt Batch
 

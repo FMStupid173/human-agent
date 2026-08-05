@@ -1,6 +1,6 @@
 # Calibration Copilot
 
-Calibration Copilot adapts Calm Agent to a specific model without changing the shared Dynamic Human Layer blindly.
+Calibration Copilot adapts 人味 Agent to a specific model without changing the shared Dynamic Human Layer blindly.
 
 Claude Code, Codex, or another coding agent can run this CLI. The coding agent is the operator, not the model being calibrated. DeepSeek generation is automatic only when a DeepSeek API key is configured. ChatGPT and Gemini web conversations still require manual output collection.
 

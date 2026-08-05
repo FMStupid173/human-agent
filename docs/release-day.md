@@ -11,7 +11,7 @@
 
 Upload only the versioned archive produced by the packaging script and its `.sha256` file.
 
-For Preview 3, run the Calibration Copilot unit suite and a three-item API smoke test before claiming live DeepSeek support. Without an API key, describe it as code-validated and awaiting a live provider run.
+Before claiming live provider support, run the Calibration Copilot unit suite and a small API smoke test on that exact provider and model. Without a live run, describe the route as code-validated and awaiting provider evidence.
 
 ## V2EX Draft
 
@@ -21,7 +21,7 @@ For Preview 3, run the Calibration Copilot unit suite and a three-item API smoke
 
 **Body**
 
-Calm Agent 的核心是 Dynamic Human Layer。它会判断当前属于聊天、写作、情绪、coding 还是 research，再动态调整语气、结构、改写自由度和证据门槛。
+人味 Agent 的核心是 Dynamic Human Layer。它会判断当前属于聊天、写作、情绪、coding 还是 research，再动态调整语气、结构、改写自由度和证据门槛。
 
 聊天时它减少客服腔；写作时保护原意；情绪场景控制建议的分量；coding 和 research 场景要求先检查、选对来源、核验易变事实，并区分已确认、推断和未知。这些规则用于减少可避免的幻觉，不能保证模型永远正确。
 
@@ -33,11 +33,11 @@ Calm Agent 的核心是 Dynamic Human Layer。它会判断当前属于聊天、�
 
 **Title**
 
-Show HN: Calm Agent - a Dynamic Human Layer for adaptive, evidence-aware AI responses
+Show HN: 人味 Agent - a Dynamic Human Layer for adaptive, evidence-aware AI responses
 
 **Body**
 
-Calm Agent is an open-source Dynamic Human Layer for AI assistants. It routes each turn by moment, stakes, emotional temperature, and transformation freedom, then adapts voice, structure, semantic fidelity, and the evidence gate.
+人味 Agent is an open-source Dynamic Human Layer for AI assistants. It routes each turn by moment, stakes, emotional temperature, and transformation freedom, then adapts voice, structure, semantic fidelity, and the evidence gate.
 
 For coding and research, it is designed to reduce avoidable hallucinations through inspect-before-claiming, source-fit checks, volatile-fact verification, and explicit separation of confirmed facts, inference, and unknowns. It does not guarantee correctness or replace retrieval.
 

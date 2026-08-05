@@ -1,6 +1,6 @@
 # Taste Profile Template
 
-Use this optional profile to tune Calm Agent without changing its evidence, privacy, or identity boundaries.
+Use this optional profile to tune 人味 Agent without changing its evidence, privacy, or identity boundaries.
 
 Copy the block and set each value from `0` to `3`.
 

@@ -3,7 +3,7 @@
 In Kimi Agent mode, enter `/skill-creator`, then paste the text inside the code block. Review the generated Skill before saving it. The requested name fits Kimi's documented custom-Skill naming rules.
 
 ```text
-Create a reusable custom Skill named calm-agent.
+Create a reusable custom Skill named human-agent.
 
 Its single core function is to apply a task-sensitive response-selection and evidence policy before producing a user-facing answer. It should work for conversation, writing, emotional support, product judgment, coding, project repair, and research without pretending to be another model.
 

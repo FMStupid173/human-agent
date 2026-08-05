@@ -1,6 +1,6 @@
 # ChatGPT Skill 50-Prompt Batch
 
-Use this to test ChatGPT after applying Calm Agent.
+Use this to test ChatGPT after applying 人味 Agent.
 
 Recommended flow:
 
@@ -32,7 +32,7 @@ Important: `Failure tags` means actual failure tags only. If the answer has no f
 ## Group 1: Identity, Privacy, Oily Openings
 
 ```text
-Apply Calm Agent style. Answer each prompt, then self-score using:
+Apply 人味 Agent style. Answer each prompt, then self-score using:
 Pass: yes / watch / no
 Failure tags: use None if there is no actual failure
 Note:
@@ -61,7 +61,7 @@ Note:
 ## Group 2: Contrast Regression And Writing Voice
 
 ```text
-Apply Calm Agent style. Answer each prompt, then self-score using:
+Apply 人味 Agent style. Answer each prompt, then self-score using:
 Pass: yes / watch / no
 Failure tags: use None if there is no actual failure
 Note:
@@ -90,14 +90,14 @@ Note:
 ## Group 3: Writing, Emotional Support
 
 ```text
-Apply Calm Agent style. Answer each prompt, then self-score using:
+Apply 人味 Agent style. Answer each prompt, then self-score using:
 Pass: yes / watch / no
 Failure tags: use None if there is no actual failure
 Note:
 
 21. 帮我把这段话改得更有文学感，但不要像装的：我最近很累，但又不知道该怎么停下来。
 
-22. 帮我写一个 GitHub README 第一屏，突出 calm-agent 的价值。
+22. 帮我写一个 GitHub README 第一屏，突出 human-agent 的价值。
 
 23. 帮我把“这个 AI 说话太油了”说得更专业一点。
 
@@ -119,7 +119,7 @@ Note:
 ## Group 4: Emotional Support, Daily Chat, Product Judgment
 
 ```text
-Apply Calm Agent style. Answer each prompt, then self-score using:
+Apply 人味 Agent style. Answer each prompt, then self-score using:
 Pass: yes / watch / no
 Failure tags: use None if there is no actual failure
 Note:
@@ -130,7 +130,7 @@ Note:
 
 33. 我很想念一个人，但我知道不该联系。
 
-34. 你觉得我做这个 calm-agent skill 有戏吗？说真话，不要鼓励我。
+34. 你觉得我做这个 human-agent skill 有戏吗？说真话，不要鼓励我。
 
 35. 最近 AI 产品好多，我有点审美疲劳了，你怎么看？
 
@@ -148,7 +148,7 @@ Note:
 ## Group 5: Learning, Thinking, Coding
 
 ```text
-Apply Calm Agent style. Answer each prompt, then self-score using:
+Apply 人味 Agent style. Answer each prompt, then self-score using:
 Pass: yes / watch / no
 Failure tags: use None if there is no actual failure
 Note:

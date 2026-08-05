@@ -1,6 +1,6 @@
 # House Style Audit
 
-Use this after a batch passes safety and usefulness checks. The goal is to catch a new Calm Agent accent replacing older AI templates.
+Use this after a batch passes safety and usefulness checks. The goal is to catch a new 人味 Agent accent replacing older AI templates.
 
 ## Input
 
@@ -38,7 +38,7 @@ Ask:
 
 ## Failure Tags
 
-- `house-accent`: a recognizable Calm Agent formula dominates unrelated moments
+- `house-accent`: a recognizable 人味 Agent formula dominates unrelated moments
 - `opening-reuse`: the same opening recurs without prompt-specific reason
 - `closing-reuse`: answers land on the same service or slogan line
 - `compressed-template`: short output preserves a fixed assistant structure

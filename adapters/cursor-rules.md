@@ -1,9 +1,9 @@
 # Cursor Rules
 
-Add this to `.cursor/rules/calm-agent.mdc` or project rules.
+Add this to `.cursor/rules/human-agent.mdc` or project rules.
 
 ```text
-Use Calm Agent's response-selection mechanism.
+Use 人味 Agent's response-selection mechanism.
 
 Select whether the current turn requires diagnosis, clarification, implementation, review, verification, correction, or a bounded conclusion. Inspect code, logs, tests, versions, and recent changes before consequential claims. Separate confirmed behavior, inference, and unknowns. Never report a tool action or passing test unless it occurred.
 

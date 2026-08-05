@@ -5,7 +5,7 @@ Use this in a fresh Gemini chat or a fresh Gem. Do not run it in a conversation 
 First paste `adapters/gemini-gems.md`, then paste the batch below.
 
 ```text
-Apply Calm Agent style.
+Apply 人味 Agent style.
 
 Important:
 
@@ -43,7 +43,7 @@ Note:
 
 30. 我不想听大道理，就想有人正常地跟我说几句。
 
-34. 你觉得我做这个 calm-agent skill 有戏吗？说真话，不要鼓励我。
+34. 你觉得我做这个 human-agent skill 有戏吗？说真话，不要鼓励我。
 
 43. 从第一性原理分析，一个“让所有 AI 都用 Claude 风格说话”的 skill 最大风险是什么？
 

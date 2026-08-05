@@ -308,7 +308,7 @@ def deepseek_chat(
         "temperature": provider.get("temperature", 0.0),
         "max_tokens": provider.get("max_tokens", 2048),
         "thinking": {"type": provider.get("thinking", "disabled")},
-        "user_id": "calm-agent-calibrator",
+        "user_id": "human-agent-calibrator",
     }
     if json_mode:
         body["response_format"] = {"type": "json_object"}
@@ -321,7 +321,7 @@ def deepseek_chat(
         headers={
             "Authorization": f"Bearer {secret}",
             "Content-Type": "application/json",
-            "User-Agent": "calm-agent-calibrator/0.1",
+            "User-Agent": "human-agent-calibrator/0.1",
         },
     )
     timeout = int(provider.get("timeout_seconds", 180))
@@ -381,7 +381,7 @@ def prepare(config: dict[str, Any], config_file: Path, run_dir: Path) -> None:
     holdout_ratio = float(dataset.get("holdout_ratio", 0.3))
     if not 0.1 <= holdout_ratio <= 0.5:
         raise CalibrationError("holdout_ratio must be between 0.1 and 0.5")
-    seed = str(dataset.get("seed", "calm-agent-calibration-v1"))
+    seed = str(dataset.get("seed", "human-agent-calibration-v1"))
     prompts = parse_prompts(dataset_path, str(dataset.get("section", "")))
     holdout_ids = exact_split_ids(prompts, seed, holdout_ratio)
     rows: list[dict[str, str]] = []
@@ -870,7 +870,7 @@ def doctor(config: dict[str, Any]) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Calm Agent cross-model Calibration Copilot")
+    parser = argparse.ArgumentParser(description="人味 Agent cross-model Calibration Copilot")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     def common(name: str) -> argparse.ArgumentParser:
