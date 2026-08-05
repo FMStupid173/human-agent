@@ -26,7 +26,7 @@ const C = {
 };
 
 const FPS = 30;
-const CUTS = [86, 226, 287, 481, 610, 725, 816];
+const CUTS = [103, 270, 350, 531, 611, 715, 800, 850];
 const hardShadow = '10px 10px 0 rgba(12,12,12,.16)';
 const lightShadow = '10px 10px 0 rgba(201,255,53,.13)';
 
@@ -54,7 +54,7 @@ const GridBackground: React.FC<{dark?: boolean}> = ({dark}) => (
 const FrameChrome: React.FC = () => {
   const frame = useCurrentFrame();
   const width = interpolate(frame, [0, 899], [0, 100], clamp);
-  const inverse = (frame >= 226 && frame < 287) || (frame >= 481 && frame < 610) || frame >= 816;
+  const inverse = (frame >= 270 && frame < 350) || (frame >= 611 && frame < 715) || frame >= 850;
   const chromeColor = inverse ? 'rgba(255,255,255,.72)' : C.gray;
   return (
     <>
@@ -68,16 +68,13 @@ const FrameChrome: React.FC = () => {
 };
 
 const captions = [
-  [3, 87, 'AI 回答得很快，却经常没回到点上。'],
-  [86, 145, '你只想被听见，它开始说教；'],
-  [145, 226, '代码和资料没看，它已经给出结论。'],
-  [226, 287, '所以我做了人味 Agent。'],
-  [287, 360, '动态人感层先判断场景、边界和介入程度，'],
-  [360, 481, '再选择回答、追问、质疑，还是留白。'],
-  [481, 610, '做项目时，它从输入、状态、依赖、输出和不变量拆问题；'],
-  [610, 725, '给结论前，再找能推翻自己的证据，跑完验证才收尾。'],
-  [725, 816, '它会把已确认、合理推断和未知分开，'],
-  [816, 899, '让回答少一点套话，多一点判断和证据。'],
+  [3, 103, 'AI 最让人出戏的，不只是答错。'],
+  [102, 270, '你只想被听见，它却开始说教；资料没看，它已经下结论。'],
+  [270, 350, '于是我做了人味 Agent。'],
+  [350, 531, '它先判断该接住、追问、质疑还是执行，再决定怎么说。'],
+  [531, 611, '写作时，保留你的声音。'],
+  [611, 800, '做项目时，从输入、状态和证据拆问题；再找反例、跑验证。'],
+  [800, 899, '少一点套话，多一点判断和证据。'],
 ] as const;
 
 const Caption: React.FC = () => {
@@ -104,11 +101,11 @@ const Hook: React.FC = () => {
     <AbsoluteFill style={{fontFamily, overflow: 'hidden'}}>
       <GridBackground />
       <div style={{position: 'absolute', left: 56, top: 74, right: 56}}>
-        <Label>01 / 痛点不是“说得不漂亮”</Label>
-        <div style={{fontSize: 104, lineHeight: 1.03, fontWeight: 900, transform: `translateY(${(1 - a) * 70}px)`, opacity: a}}>AI 回答很快</div>
+        <Label>01 / 真正让人出戏的瞬间</Label>
+        <div style={{fontSize: 100, lineHeight: 1.03, fontWeight: 900, transform: `translateY(${(1 - a) * 70}px)`, opacity: a}}>AI 最让人出戏的</div>
         <div style={{marginTop: 14, display: 'flex', alignItems: 'center', gap: 22, transform: `translateX(${(1 - b) * 90}px)`, opacity: b}}>
-          <span style={{padding: '10px 22px', backgroundColor: C.red, color: C.white, fontSize: 50, fontWeight: 900}}>但是</span>
-          <span style={{fontSize: 92, fontWeight: 900}}>没回到点上</span>
+          <span style={{padding: '10px 22px', backgroundColor: C.red, color: C.white, fontSize: 50, fontWeight: 900}}>不只是</span>
+          <span style={{fontSize: 92, fontWeight: 900}}>答错。</span>
         </div>
         <div style={{marginTop: 46, display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12, opacity: c}}>
           {[
@@ -291,11 +288,37 @@ const DynamicRouter: React.FC = () => {
   );
 };
 
+const WritingFidelity: React.FC = () => {
+  const f = useCurrentFrame();
+  const reveal = rise(f, 8, 220);
+  return (
+    <AbsoluteFill style={{fontFamily, backgroundColor: C.cyan, color: C.white, padding: '70px 56px 250px', boxSizing: 'border-box', overflow: 'hidden'}}>
+      <Label dark>04 / 写作保真</Label>
+      <div style={{fontSize: 76, lineHeight: 1.05, fontWeight: 900}}>轻改，<br />不换掉你的声音。</div>
+      <div style={{marginTop: 52, display: 'grid', gridTemplateColumns: '1fr 92px 1fr', alignItems: 'stretch', gap: 12}}>
+        <div style={{backgroundColor: C.white, color: C.ink, border: `4px solid ${C.ink}`, padding: 28, minHeight: 420, boxShadow: hardShadow}}>
+          <div style={{fontSize: 26, color: C.gray, fontWeight: 900}}>你的原句</div>
+          <div style={{fontSize: 39, lineHeight: 1.45, fontWeight: 900, marginTop: 48}}>“我最近有点空，<br />也说不清自己在等什么。”</div>
+        </div>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 56, fontWeight: 900}}>→</div>
+        <div style={{backgroundColor: C.ink, color: C.white, border: `4px solid ${C.ink}`, padding: 28, minHeight: 420, boxShadow: hardShadow, opacity: reveal, transform: `translateX(${(1 - reveal) * 50}px)`}}>
+          <div style={{fontSize: 26, color: C.lime, fontWeight: 900}}>保留犹豫感</div>
+          <div style={{fontSize: 39, lineHeight: 1.45, fontWeight: 900, marginTop: 48}}>“最近有点空。<br />也不知道自己在等什么。”</div>
+        </div>
+      </div>
+      <div style={{marginTop: 34, backgroundColor: C.lime, color: C.ink, border: `4px solid ${C.ink}`, padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxShadow: hardShadow}}>
+        <span style={{fontSize: 28, color: C.gray, fontWeight: 900}}>SEMANTIC FIDELITY</span>
+        <span style={{fontSize: 36, fontWeight: 900}}>原意 · 强度 · 语气</span>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const FirstPrinciples: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{fontFamily, backgroundColor: C.ink, color: C.white, padding: '66px 56px 250px', boxSizing: 'border-box', overflow: 'hidden'}}>
-      <Label dark>04 / 做项目：先建立因果链</Label>
+      <Label dark>05 / 做项目：先建立因果链</Label>
       <div style={{fontSize: 60, fontWeight: 900}}>第一性原理，不等于推倒重来。</div>
       <div style={{marginTop: 22, fontSize: 31, color: '#BDBDBD'}}>从系统真正拥有的输入、状态和约束开始。</div>
       <div style={{marginTop: 54, display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 10}}>
@@ -348,7 +371,7 @@ const AdversarialFinish: React.FC = () => {
   const pass = rise(f, 60, 220);
   return (
     <AbsoluteFill style={{fontFamily, backgroundColor: C.yellow, padding: '66px 56px 250px', boxSizing: 'border-box', overflow: 'hidden'}}>
-      <Label>05 / 对抗性审查：专门找自己哪里错</Label>
+      <Label>06 / 对抗性审查：专门找自己哪里错</Label>
       <div style={{fontSize: 60, lineHeight: 1.12, fontWeight: 900}}>结论写完，不等于任务完成。</div>
       <div style={{marginTop: 42, display: 'grid', gridTemplateColumns: '1fr 90px 1fr', gap: 14, alignItems: 'stretch'}}>
         <div style={{border: `4px solid ${C.ink}`, backgroundColor: C.white, padding: 24, boxShadow: hardShadow}}>
@@ -393,7 +416,7 @@ const Reliability: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{fontFamily, padding: '66px 56px 250px', boxSizing: 'border-box', backgroundColor: C.white, overflow: 'hidden'}}>
-      <Label>06 / 可靠性机制</Label>
+      <Label>07 / 可靠性机制</Label>
       <div style={{fontSize: 68, lineHeight: 1.08, fontWeight: 900}}>把确定程度<br />写在答案里。</div>
       <div style={{marginTop: 34, backgroundColor: C.cyan, color: C.white, display: 'inline-block', padding: '14px 20px', fontSize: 34, fontWeight: 900}}>事实、推断、未知，一眼分开</div>
       <div style={{marginTop: 42, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14}}>
@@ -465,18 +488,19 @@ export const HumanAgentPromo: React.FC = () => (
     <Audio src={staticFile('voiceover.mp3')} volume={1.55} />
     <Audio src={staticFile('soundbed.mp3')} volume={0.30} />
 
-    <Sequence from={0} durationInFrames={86}><Hook /></Sequence>
-    <Sequence from={86} durationInFrames={140}><PainCases /></Sequence>
-    <Sequence from={226} durationInFrames={61}><BrandReveal /></Sequence>
-    <Sequence from={287} durationInFrames={194}><DynamicRouter /></Sequence>
-    <Sequence from={481} durationInFrames={129}><FirstPrinciples /></Sequence>
-    <Sequence from={610} durationInFrames={115}><AdversarialFinish /></Sequence>
-    <Sequence from={725} durationInFrames={91}><Reliability /></Sequence>
-    <Sequence from={816} durationInFrames={84}><CTA /></Sequence>
+    <Sequence from={0} durationInFrames={103}><Hook /></Sequence>
+    <Sequence from={103} durationInFrames={167}><PainCases /></Sequence>
+    <Sequence from={270} durationInFrames={80}><BrandReveal /></Sequence>
+    <Sequence from={350} durationInFrames={181}><DynamicRouter /></Sequence>
+    <Sequence from={531} durationInFrames={80}><WritingFidelity /></Sequence>
+    <Sequence from={611} durationInFrames={104}><FirstPrinciples /></Sequence>
+    <Sequence from={715} durationInFrames={85}><AdversarialFinish /></Sequence>
+    <Sequence from={800} durationInFrames={50}><Reliability /></Sequence>
+    <Sequence from={850} durationInFrames={50}><CTA /></Sequence>
 
     {CUTS.map((cut, index) => (
       <Sequence key={cut} from={cut - 3} durationInFrames={6}>
-        <Wipe color={[C.red, C.lime, C.cyan, C.yellow, C.blue, C.red, C.lime][index]} />
+        <Wipe color={[C.red, C.lime, C.cyan, C.yellow, C.blue, C.red, C.lime, C.cyan][index]} />
       </Sequence>
     ))}
     <Caption />

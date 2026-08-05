@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.2.0",
   "scripts": {
-    "render": "remotion render src/index.ts HumanAgentPromo out/human-agent-30s-v3.mp4 --codec=h264 --crf=18",
-    "still": "remotion still src/index.ts HumanAgentPromo out/human-agent-cover-v3.png --frame=850"
+    "render": "remotion render src/index.ts HumanAgentPromo out/human-agent-30s-v4.mp4 --codec=h264 --crf=18",
+    "still": "remotion still src/index.ts HumanAgentPromo out/human-agent-cover-v4.png --frame=875"
   },
   "dependencies": {
     "@remotion/cli": "4.0.332",

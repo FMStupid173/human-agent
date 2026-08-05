@@ -4,14 +4,14 @@ Use Instrumental mode. Target duration: 30 seconds.
 
 ## Style prompt
 
-Modern minimal electronic product soundtrack, 112 BPM, C minor, instrumental only, immediate hook with no intro, confident and intelligent rather than epic, tight dry kick, warm controlled sub bass, crisp restrained percussion, subtle analog synth arpeggio, editorial technology aesthetic, energetic micro-transitions, clean decisive ending, leave generous space in the 1-4 kHz range for Mandarin female voice-over, polished social media launch video mix.
+Warm minimal electronic editorial soundtrack, 92 BPM, D minor, instrumental only, intimate and quietly confident, soft felt-key or glassy synth motif, warm pad, restrained low pulse, sparse rim percussion, subtle human texture, modern design-film aesthetic, reflective without becoming sad, small elegant transitions, clean decisive ending, leave generous space in the 1-4 kHz range for a slow Mandarin female voice-over, polished social media launch video mix.
 
 ## Timing and arrangement
 
-- 0:00 immediate low impact and recognizable two-note synth motif
-- 0:03 add tight percussion
+- 0:00 immediate soft two-note motif, no long intro
+- 0:03 add a restrained low pulse
 - 0:08 short transition into the product reveal
-- 0:10 establish the main arpeggio
+- 0:10 establish the warm main motif
 - 0:16 add momentum for the first-principles section
 - 0:20 small tension lift for adversarial review
 - 0:24 resolve into a clear reliability section
@@ -19,4 +19,4 @@ Modern minimal electronic product soundtrack, 112 BPM, C minor, instrumental onl
 
 ## Avoid
 
-No vocals, no spoken words, no cinematic trailer boom, no orchestral strings, no EDM drop, no long riser, no cheerful corporate ukulele, no lo-fi vinyl noise, no dense lead melody competing with narration.
+No vocals, no spoken words, no cinematic trailer boom, no EDM drop, no aggressive kick, no busy hi-hats, no long riser, no cheerful corporate ukulele, no lo-fi vinyl noise, no sentimental piano ballad, no dense lead melody competing with narration.
